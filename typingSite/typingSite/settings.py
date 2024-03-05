@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['word-in-word-site-11.onrender.com']
+ALLOWED_HOSTS = ['word-in-word.onrender.com']
 
 # defined variables
 
