@@ -1,0 +1,43 @@
+{% extends "base_html.html" %}
+{%block title%} Settings {%endblock%}
+
+{%load static%}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'account/account.css' %}">
+{% endblock %}
+{% block content %}
+<div class="wrapper-columns">
+    <div class="wrapper-head">
+        <h2>Changes</h2>
+    </div>
+    <div class = "columns">
+        <div class = "column">
+            <ul class = "txt-column">
+                <li>User Name</li>
+                <li>Email</li>
+                <li>Password</li>
+            </ul>
+        </div>
+        <div class = "column">
+            <ul class = "button-column">
+                <li>
+                    <a href="{%url "account:username"%}">
+                        <button>User Name</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="{%url "account:email"%}">
+                        <button>Email</button>
+                    </a>
+                </li>
+                <li>
+                    <a href="{%url "account:password"%}">
+                        <button>Password</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+```

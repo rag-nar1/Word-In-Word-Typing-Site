@@ -1,0 +1,115 @@
+:root{
+    --backgroundColor: #000000;
+    --secondaryColor: #1B4242  ;
+    --tertiaryColor: #6b9288;
+    --textColor:  #ffffff;
+    --buttonColor: #9AD0C2;
+    --font: "Playfair Display", serif;
+
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--secondaryColor);
+    width: 100%;
+    width:fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px var(--tertiaryColor);
+    padding: 2em;
+    margin: 1em;
+} 
+
+.wrapper *{
+    margin: 0;
+    padding-top: 10px;
+}
+
+.track{
+    display: flex;
+    margin: 1em;
+    position: fixed;
+    gap: 4vmin;
+    top : 50%;
+    left: 50%;
+    transform: translate(0% , 50%);
+}
+
+.char-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondaryColor);
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px var(--tertiaryColor);
+    width: 20vmin;
+    height: 20vmin;
+
+}
+
+.char-card *{
+    margin: 0;
+}
+.char-card .char-acc{
+    margin-top: 0.5em;
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2;                                                                                   
+    margin-top: 1em;
+}
+.arrow p{
+    font-size: large;
+    text-shadow: 0 0 10px var(--textColor);
+}
+.arrow .img{
+    pointer-events: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.arrow img{
+    width: 5vmin;
+    margin-bottom: 1em;
+    margin-left: 1em;
+    filter: invert(100%) drop-shadow(0 0 10px var(--textColor));
+}
+
+.wrapper-columns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--secondaryColor);
+    width: 100%;
+    width:fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px var(--tertiaryColor);
+    padding: 2em;
+    margin: 1em;
+}
+.columns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.column ul li{
+    margin: 1em;
+    padding: 1em;
+    width: 20vmin;
+    text-align: center;
+}

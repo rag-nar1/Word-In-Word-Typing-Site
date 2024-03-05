@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --backgroundColor: #000000;
+    --secondaryColor: #1B4242  ;
+    --tertiaryColor: #6b9288;
+    --textColor:  #ffffff;
+    --buttonColor: #9AD0C2;
+
+    --navitemswidth: 20%;
+    --font: "Playfair Display", serif;
+}
+
+*{
+    font-family: var(--font);
+    font-weight: bold;
+    font-size: 2vmin;
+    color: var(--textColor);
+}
+p , h1 , a , button , img{
+    user-select: none;
+}
+body{
+    background-color: var(--backgroundColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+    margin: 2% 0.5%;
+    width: 90%;    
+}
+
+.logo{
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding-bottom: 1em;
+}
+.logo img{
+    width: 100%;
+}
+
+nav{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--navitemswidth);
+    /* margin-right: 6%; */
+    position: relative;
+    width: 100%;
+}
+
+.nav-items{
+    box-shadow: 0 0 7px 1px var(--textColor);
+    background-color: var(--secondaryColor);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.nav-items li{
+    padding: 0 3em;
+}
+.nav-items li a{
+    color: var(--textColor);
+    text-decoration: none;
+    text-wrap: none;
+}
+
+.nav-items li a:hover{
+    color: var(--backgroundColor);
+    cursor: pointer;
+}
+
+
+.button{
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    width: 15%;
+}
+
+button{
+    background-color: var(--tertiaryColor);
+    color: var(--textColor);
+    border: none;
+    border-radius: 10px;
+    padding: 0.2em 0.5em;
+    box-shadow: 0 0 5px 1px var(--textColor);
+    height: 70%;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: var(--buttonColor);
+    color: var(--textColor);
+    cursor: pointer;
+}

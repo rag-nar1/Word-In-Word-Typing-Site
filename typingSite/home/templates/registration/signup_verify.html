@@ -1,0 +1,21 @@
+{% extends "base_html.html" %}
+{% block title %}Verify Email{% endblock %}
+
+{%load static%}
+{%block style%}
+    <link rel="stylesheet" href="{% static 'home/form.css' %}">
+{% endblock %}
+{% block content %}
+    <form method="post" action class="form">
+        {% csrf_token %}
+        {% if error %}
+            <ul class = "errorlist">
+            
+                <li> {{error}} </li>
+            </ul>
+        {% endif %}
+        <label for="code">Enter the code sent to your email</label>
+        <input type="text" name="code" id="code">
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

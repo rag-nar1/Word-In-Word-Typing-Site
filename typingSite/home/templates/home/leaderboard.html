@@ -1,0 +1,50 @@
+{% extends "base_html.html" %}
+{% load static %}
+{%load mathfilters%}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'home/home.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="lb-wrapper">    
+        <div class="lb-header">
+            <div class="lb-header__rank">Rank</div>
+            <div class="lb-header__name">User Name</div>
+            <div class="lb-header__score">{{orderlabel}}</div>
+        </div>
+
+        {%for account in accounts%}
+            <div class="lb-item">
+                <div class="lb-item__rank">{{page |mul:10 |add:forloop.counter }} </div>
+                <div class="lb-item__name">{{account.username}}</div>
+                <div class="lb-item__score">
+                    {%if order == 'wpm'%}
+                        {{account.wpm}}
+                    {%else%}
+                        {{account.accuracy}}
+                    {%endif%}
+                </div>
+            </div>
+            {%if forloop.counter < accounts|length %}
+                <hr>
+            {%endif%}
+        {%endfor%}
+        <div class="lb-footer">
+            <div class="lb-footer__page">
+                {%if page > 0%}
+                    <a href="{%url "home:leaderboard" page%}?order={{order}}"><button>Previous</button></a>
+                {%endif%}
+                <div class="lb-footer__page__number">{{page|add:1}}</div>
+                {%if page < maximumPage|add:-1%}
+                    <a href="{%url "home:leaderboard" page|add:2%}?order={{order}}"><button>Next</button></a>
+                {%endif%}
+            </div>
+            <div class="lb-footer__order">
+                {%if orderlabel == 'WPM'%}
+                    <a href="?order=acc"><button>Accuracy</button></a>
+                {%else%}
+                    <a href="?order=wpm"><button>WPM</button></a>
+                {%endif%}
+            </div>
+    </div>   
+{% endblock %}
+```

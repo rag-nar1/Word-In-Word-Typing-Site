@@ -1,0 +1,60 @@
+:root{
+    --backgroundColor: #000000;
+    --secondaryColor: #1B4242  ;
+    --tertiaryColor: #6b9288;
+    --textColor:  #ffffff;
+    --buttonColor: #9AD0C2;
+    --font: "Playfair Display", serif;
+}
+
+
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 10%; */
+    margin-top: 1em;
+    width: 60%;
+}
+.status-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* width: 50%; */
+}
+.status{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondaryColor);
+    color: var(--textColor);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin: 1em;
+}
+.status ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    width: 90%;
+    padding: 0;
+    margin: 1em;
+}
+
+.status ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+    margin: 1em;
+    background-color: var(--tertiaryColor);
+    border-radius: 10px;
+    color: var(--textColor);
+}
+.status ul li p{
+    padding: 0;
+    margin: 0;
+}

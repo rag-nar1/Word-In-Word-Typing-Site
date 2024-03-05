@@ -1,0 +1,83 @@
+{% extends "base_html.html" %}
+{%block title%} Result {%endblock%}
+
+{%load static%}
+{%block style%}
+    <link rel="stylesheet" type="text/css" href="{% static "app/result.css" %}">
+{%endblock%}    
+
+{% block content %}
+    <div class="result">
+        <div class = "status-wrapper">
+            <div class="header-status">
+                LAST TRY
+            </div>
+            <div class = "status">
+                <ul>
+                    <li class="wpm">
+                        <p>WPM:</p>
+
+                        <span><b>
+                            {%if acc.last_wpm >= 1000%}
+                                0
+                            {%else%}
+                                {{acc.last_wpm}}
+                            {%endif%}
+                        </b></span>
+                    </li>
+                    <li class="mistakes">
+                        <p>mistakes:</p>
+                        <span><b>
+                            {%if acc.last_mistakes >= 1000%}
+                                0
+                            {%else%}
+                                {{acc.last_mistakes}}
+                            {%endif%}
+                        </b></span>
+                    </li>
+                    <li class="Accuracy">
+                        <p>Accuracy:</p>
+                        <span><b>
+                            {%if acc.last_accuracy >= 1000%}
+                                0
+                            {%else%}
+                                {{acc.last_accuracy}}
+                            {%endif%}
+                        </b>%</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class = "status-wrapper">
+            <div class="header-status">
+                OVERALL
+            </div>
+            <div class = "status">
+                <ul>
+                    <li class="wpm">
+                        <p>WPM:</p>
+
+                        <span><b>
+                            {%if acc.wpm >= 1000%}
+                                0
+                            {%else%}
+                                {{acc.wpm}}
+                            {%endif%}
+                        </b></span>
+                    </li>
+                    <li class="Accuracy">
+                        <p>Accuracy:</p>
+                        <span><b>
+                            {%if acc.accuracy >= 1000%}
+                                0
+                            {%else%}
+                                {{acc.accuracy}}
+                            {%endif%}
+                        </b>%</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+```

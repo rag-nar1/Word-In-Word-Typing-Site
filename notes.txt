@@ -1,0 +1,2 @@
+- check ssl certificate
+- check for any bad commits

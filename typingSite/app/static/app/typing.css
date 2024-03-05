@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+:root{
+    --backgroundColor: #000000;
+    --secondaryColor: #1B4242  ;
+    --tertiaryColor: #6b9288;
+    --textColor:  #ffffff;
+    --buttonColor: #9AD0C2;
+    --font: "Playfair Display", serif;
+    --pfont: "Kode Mono", monospace;
+}
+
+.formdatadiv{
+    display: none;
+}
+
+.wrapper .input{
+    opacity: 0;
+    position: absolute;
+    z-index: -999;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.wrapper .typing-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 770px;
+    padding: 20px 30px;
+    background-color: var(--secondaryColor);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 var(--textColor);
+    max-height: 400px;
+    overflow: hidden;
+}
+.wrapper .typing-text p{
+    color: var(--textColor);
+    /* font-size: 21px; */
+    /* font-size: 9vmin important!; */
+    text-align: center;
+    letter-spacing: 1px;
+    /* word-break: break-all; */
+    margin: 10px;
+    width: 100%;
+    white-space: pre;
+}
+.typing-text p span{
+    position: relative;
+    /* max-width: 5px; */
+    margin: 0px;
+    font-family: var(--pfont);
+    font-size: 110%;
+}
+
+.status{
+    display: flex;
+    align-items: center; 
+    position: relative;
+    background-color: rgb(116, 116, 116);
+    box-shadow: 0 0 10px 0 rgba(129, 104, 157 , 0.8);
+    color: var(--textColor);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 10px 10px 10px;
+    width: 100%;
+}
+
+.status ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between; 
+    margin: 0;
+    padding: 0;
+}
+
+.status ul li{
+    display: flex;
+    height: 100%;
+    list-style: none;
+    position: relative;
+    align-items: center;
+}
+.status ul li p{
+    font-size: 19px;
+    margin-bottom: 0;
+}
+.status ul li span{
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+
+.wrong{
+    color: red;
+    background-color: rgba(219, 167, 167, 0.9);
+    border-radius: 5px;
+}
+
+.correct{
+    color: rgb(0, 255, 0);
+}
+.alt{
+    color: rgb(255, 255, 0);
+    background-color: rgba(102, 102, 70, 0.8);
+    border-radius: 5px;
+}
+
+.currChar::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width : 100%;
+    background-color: aqua;
+    animation: blink 1s infinite;
+}
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

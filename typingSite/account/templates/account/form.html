@@ -1,0 +1,27 @@
+{% extends "base_html.html" %}
+{%block title%}
+    {%if request.path == "/account/settings/username/"%}
+        Change Username
+    {%elif request.path == "/account/settings/password/"%}
+        Change Password
+    {%elif request.path == "/account/settings/email/"%}
+        Change Email
+    {%endif%}
+{%endblock%}
+{%load static%}
+{%block style%}
+    <link rel="stylesheet" href="{% static 'home/form.css' %}">
+{% endblock %}
+{% block content %}
+    <form method="post" action class="form">
+        {% csrf_token %}
+        {% if error %}
+            <ul class = "errorlist">
+            
+                <li> {{error}} </li>
+            </ul>
+        {% endif %}
+        {{ form.as_table }}
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}

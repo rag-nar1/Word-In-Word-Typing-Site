@@ -1,0 +1,53 @@
+{% extends "base_html.html" %}
+{%block title%} Profile {%endblock%}
+{%load static%}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'account/account.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="profile">
+            <div class="wrapper">
+                <h1>Profile</h1>
+                <p>Username: {{ acc.user.username }}</p>
+                <p>Email: {{ acc.user.email }}</p>
+                {%if acc.accuracy != 1000%}
+                    <p>accuracy: {{ acc.accuracy}} </p>
+                {% else %}
+                    <p>accuracy: 0</p>
+                {%endif%}
+                {%if acc.wpm != 1000%}
+                    <p>WPM: {{ acc.wpm }}</p>
+                {% else %}
+                    <p>WPM: 0</p>
+                {%endif%}
+            </div>
+    </div>
+    <div class="arrow">
+        <p>CLICK</p>
+        <div class="img">
+            <img src="{% static 'account/click.svg' %}" alt="arrow">
+        </div>
+        <p> AND DRAG</p>
+        <div class="img">
+            <img src="{% static 'account/right-arrow.svg' %}" alt="arrow">
+        </div>
+    </div>
+    <div class="track" data-down-at="0" data-prev="0">
+        {%for char in chars%}
+            <div class="char-card">
+                <p class="char-char"> {{ char.char }} </p>
+                {%if char.acc != 1000%}   
+                    <p class="char-acc"> {{ char.acc }} %</p>
+                {% else %}
+                    <p class="char-acc">
+                        0%
+                    </p>
+                {%endif%}
+            </div>
+        {%endfor%}
+    </div>
+{% endblock %}
+{% block script %}
+    <script src="{% static 'account/drag.js' %}"></script>
+{% endblock %}
+```

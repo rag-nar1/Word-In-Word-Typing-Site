@@ -1,0 +1,100 @@
+:root{
+    --backgroundColor: #000000;
+    --secondaryColor: #1B4242  ;
+    --tertiaryColor: #6b9288;
+    --textColor:  #ffffff;
+    --buttonColor: #9AD0C2;
+    --font: "Playfair Display", serif;
+
+}
+
+
+.form{
+    background-color: var(--secondaryColor);
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px var(--tertiaryColor);
+    padding: 1em 2em;
+    margin: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form input{
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: none;
+    background-color: #FEFBF6;
+    color: var(--secondaryColor);
+    font: var(--font);
+    font-weight: bold;
+    box-shadow: 0 0 5px 2px var(--tertiaryColor);
+    font-size: large;
+    width: 100%;
+    text-align: center;
+}
+
+.form input:focus{
+    outline: none;
+    caret-color: rgb(8, 67, 82);
+}
+.helptext , .form ul:not([class]){
+    display: none;
+}
+
+.errorlist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    background-color: red;
+    font-size:medium;
+    border-radius: 10px;
+    padding: 0.5em;
+    margin: 0.5em;
+
+}
+
+.form button{
+    margin-top: 10%;
+}
+
+.forget{
+    color: var(--textColor);
+    text-decoration: none;
+    font-size: 90%;
+    opacity: 0.7;
+}
+
+.forget:hover{
+    opacity: 1;
+    cursor: pointer;
+    color: var(--backgroundColor);
+    text-decoration: none;
+}
+#id_maxTime , #id_maxWords{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+#id_maxTime input[type="radio"] , #id_maxWords input[type="radio"]{
+    box-shadow: none;
+    transform: scale(1.5);
+}
+
+#id_maxTime label , #id_maxWords label{
+    color: var(--textColor);
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1em;
+}

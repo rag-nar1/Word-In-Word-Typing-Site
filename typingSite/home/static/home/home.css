@@ -1,0 +1,134 @@
+:root{
+    --backgroundColor: #000000;
+    --secondaryColor: #1B4242  ;
+    --tertiaryColor: #6b9288;
+    --textColor:  #ffffff;
+    --buttonColor: #9AD0C2;
+    --font: "Playfair Display", serif;
+
+}
+
+
+p{
+    color: var(--textColor);
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+    transform: translate(-25% , 0%);
+
+}
+
+.img-1{
+    width: 30%;
+    height: 30%;
+    transform: translate(-5% , 100%);
+    position: relative;
+    margin-right: 10%;
+}
+
+.home-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--secondaryColor);
+    box-shadow: 0 0 7px 1px var(--textColor);
+    width: 40%;
+    height: 30%;
+    margin: 5% ;
+    padding: 5% 2%;
+    border-radius: 10px;
+    /* position: fixed;
+    top: 30%;
+    left: 40%; */
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    /* flex-direction: column; */
+    /* width: 100%; */
+}
+.buttons a{
+    margin: 0 0.5em;
+    /* width: 5em; */
+
+}
+.buttons a button{
+    width: 100%;
+    /* width: 5em;*/
+}
+
+.complate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.complate a{
+    margin: 0 0.5em;
+    /* width: 5em; */
+}
+
+
+.lb-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    background-color: var(--secondaryColor);
+    box-shadow: 0 0 7px 1px var(--textColor);
+    border-radius: 10px;
+    padding: 2em;
+    width: 50%;
+}
+
+.lb-item , .lb-header ,.lb-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* gap: 4em; */
+    
+}
+.lb-header{
+    background-color: var(--tertiaryColor);
+    box-shadow:0 0 7px 1px var(--textColor);
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+.lb-item{
+    margin: 0.5em 0;
+    padding: 0.5em;
+}
+hr{
+    width: 100%;
+    margin: 0;
+    border: 0.1em solid var(--textColor);
+}
+
+.lb-footer__page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 1em;
+}
+a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+.lb-footer__page a button{
+    width: 100%;
+    font-size: large;
+}
+.lb-footer__page__number{
+    font-size: x-large;
+}
