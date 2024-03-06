@@ -1,4 +1,18 @@
 # Word In Word Typing Web Applaication
+<a href="https://word-in-word.onrender.com/"><img src="typingSite/home/static/home/logo.svg" width="50%"></a>
+
+<br>
+
+## table of contents
+- [What is Word In Word ?](#what-is-word-in-word-)
+- [But what makes our site special ?](#but-what-is-the-difference-between-word-in-word-and-other-typing-applications)
+- [How does Word In Word work?](#how-does-word-in-word-work)
+- [Technical Information](#technical-information)
+    - [Database](#database)
+    - [Dependencies](#dependencies)
+    - [Deployment](#deployment)
+    - [Demo Link](#demo-link)
+    
 ## What is Word In Word ?
 - Welcome to Word In Word, a user-friendly web application designed to create an optimal environment for honing your typing skills.
 - With its simplicity and ease of use, Word In Word is crafted to assist you in enhancing both your typing speed and accuracy.
@@ -29,10 +43,11 @@
 - Elevating the typing functionality, JavaScript takes the reins to capture user input, compare it with anticipated characters, and compute both accuracy and typing speed.
 
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)
+![postgresql](https://img.shields.io/badge/postgresql-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)                                                                    
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)                                                                
 ### Database
 - The application uses SQLite as the database to store user information.
 - The Core of the application is words and letters, which are stored in the database to be used in the typing exercises based on the user's preformance and the letters they need to improve.
@@ -63,7 +78,7 @@
 <img src="dbmodel.png" width="70%">
 
 ### Dependencies
-- The application uses the following dependencies:
+- The most important dependencies used in the application are:
     - Django
     - Python-dotenv
     - Django-extension
@@ -73,3 +88,13 @@ you can install them using the following command:
 ```bash
 pip install -r requirements.txt
 ```
+### Deployment
+- Database deployment:
+    - In the development phase, the application uses the SQLite database stored locally.
+    - In the production phase, the application uses the PostgreSQL database stored in the Supabase cloud.
+- Application deployment:
+    - The Django application is deployed using [Render](https://render.com/).
+    - the **build.sh** script is used to build the application and install the dependencies.
+### Demo Link
+- You can access the application using the following link:
+    - [Word In Word](https://word-in-word.onrender.com/)
